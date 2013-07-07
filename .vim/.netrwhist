@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/Users/branislav.vladisavljev/Sites/BackboneGenerator/backbone-boilerplate/vendor/bower_components'
+let g:netrw_dirhist_2='/Users/branislav.vladisavljev/Sites/Pagoda/test/zany-zita/app/View/Themed/Cakestarter-Bootstrap'
+let g:netrw_dirhist_3='/Users/branislav.vladisavljev/.subversion'
+let g:netrw_dirhist_4='/Users/branislav.vladisavljev/.oh-my-zsh'
