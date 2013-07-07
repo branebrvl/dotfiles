@@ -1,3 +1,39 @@
 [submodule "oh-my-zsh"]
 path = .oh-my-zsh
 url = https://github.com/robbyrussell/oh-my-zsh.git
+[submodule "nerdtree"]
+path = .vim/bundle/nerdtree
+url = https://github.com/scrooloose/nerdtree.git
+[submodule "syntastic"]
+path = .vim/bundle/syntastic
+url = https://github.com/scrooloose/syntastic.git
+[submodule "tcomment_vim"]
+path = .vim/bundle/tcomment_vim
+url = https://github.com/tomtom/tcomment_vim 
+[submodule "tlib_vim"]
+path = .vim/bundle/tlib_vimh
+url = https://github.com/tomtom/tlib_vim.git
+[submodule "vim-addon-mw-utils"]
+path = .vim/bundle/vim-addon-mw-utils
+url = https://github.com/MarcWeber/vim-addon-mw-utils.git
+[submodule "vim-colors-solarized"]
+path = .vim/bundle/vim-colors-solarized
+url = git://github.com/altercation/vim-colors-solarized.git
+[submodule "vim-javascript"]
+path = .vim/bundle/vim-javascript
+url = https://github.com/pangloss/vim-javascript.git
+[submodule "vim-jsbeautify"]
+path = .vim/bundle/vim-jsbeautify
+url = https://github.com/maksimr/vim-jsbeautify.git
+[submodule "vim-matchit"]
+path = .vim/bundle/vim-matchit
+url = https://github.com/tsaleh/vim-matchit
+[submodule "vim-snipmate"]
+path = .vim/bundle/vim-snipmate
+url = https://github.com/garbas/vim-snipmate.git
+[submodule "vim-surround"]
+path = .vim/bundle/vim-surround
+url = git://github.com/tpope/vim-surround.git
+[submodule "vim-textmanip"]
+path = .vim/bundle/vim-textmanip
+url = https://github.com/t9md/vim-textmanip
