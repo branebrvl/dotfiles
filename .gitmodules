@@ -11,7 +11,7 @@ url = https://github.com/scrooloose/syntastic.git
 path = .vim/bundle/tcomment_vim
 url = https://github.com/tomtom/tcomment_vim 
 [submodule "tlib_vim"]
-path = .vim/bundle/tlib_vimh
+path = .vim/bundle/tlib_vim
 url = https://github.com/tomtom/tlib_vim.git
 [submodule "vim-addon-mw-utils"]
 path = .vim/bundle/vim-addon-mw-utils
