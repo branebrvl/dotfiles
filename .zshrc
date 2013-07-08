@@ -47,3 +47,8 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 # export PATH=$PATH:/usr/local/heroku/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin
 export PATH="$(brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:$PATH"
+# Colors ----------------------------------------------------------
+export TERM=xterm-color
+export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
+export CLICOLOR=1
+export LSCOLORS=GxFxCxDxBxegedabagaced
