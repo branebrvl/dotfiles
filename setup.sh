@@ -1,7 +1,11 @@
 #!/bin/bash
 # Simple setup.sh
-ln -sb dotfiles/.bash_profile
-ln -sb dotfiles/.vim
-ln -sb dotfiles/.oh-my-zsh
-ln -sb dotfiles/.vimrc
-ln -sb dotfiles/.zshrc
+ln -s dotfiles/.bash_profile
+ln -s dotfiles/.vim
+ln -s dotfiles/.oh-my-zsh
+ln -s dotfiles/.vimrc
+ln -s dotfiles/.zshrc
+ln -s dotfiles/.gitconfig
+ln -s dotfiles/bin/git_diff_wrapper bin/git_diff_wrapper
+echo "Initializing submodules..."
+git submodule init && git submodule update

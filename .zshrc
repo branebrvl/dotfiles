@@ -40,13 +40,21 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git battery brew osx gradle ant compleat dirpersist gem ssh-agent cloudapp ruby textmate sublime)
+# plugins=(git battery brew osx gradle ant compleat dirpersist gem ssh-agent cloudapp ruby textmate sublime)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-# export PATH=$PATH:/usr/local/heroku/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin
-export PATH="$(brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:$PATH"
+export PATH=$PATH
+export PATH=/usr/local/heroku/bin:$PATH
+export PATH=/usr/local/bin:$PATH
+export PATH=/usr/bin:$PATH
+export PATH=/bin:$PATH
+export PATH=/usr/sbin:$PATH
+export PATH=/sbin:$PATH # Heroku: https://toolbelt.heroku.com/standalone
+
+# export PATH="$(brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:$/usr/local/heroku/bin:PATH"
+
 # Colors ----------------------------------------------------------
 export TERM=xterm-color
 export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
