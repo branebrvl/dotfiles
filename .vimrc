@@ -54,6 +54,10 @@ let g:html_indent_script1 = "inc"
 let g:html_indent_style1 = "inc"
 
 " Faster commenting for T-Comment plugin
+noremap <leader>o <Esc>:CommandT<CR>
+noremap <leader>O <Esc>:CommandTFlush<CR>
+noremap <leader>m <Esc>:CommandTBuffer<CR>
+
 map <leader>c <c-_><c-_>
 map <C-n> :NERDTreeToggle<CR>
 map ,f :FufFile<CR>

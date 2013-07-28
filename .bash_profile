@@ -1,4 +1,4 @@
-ulimit -n 1024
+ulimit -n 10024
 alias la='ls -alhG'
 alias ll='ll -alrth'
 alias c='clear'
@@ -11,10 +11,14 @@ export EDITOR="vim"
 # export GIT_EDITOR="vim"
 # export GIT_EXTERNAL_DIFF="vimdiff"
 export SVN_EDITOR="vim"
-# alias git_diff_wrapper='$HOME/dotfiles/bin/git_diff_wrapper'
-# export PATH=$PATH:$HOME/dotfiles/bin/git_diff_wrapper
-# git diff --no-ext-diff -w "$@" | vim -R -
+export GREP_OPTIONS="--exclude-dir=\*/.svn/\* --exclude-dir=\*/.hg/\* --exclude-dir=\*/.git/\*"
 
+alias jsgrep='find . -name "*js" -type f -print0 | xargs -0 grep -H'
+alias phpgrep='find . -name "*php" -type f -print0 | xargs -0 grep -H'
+alias htmlgrep='find . -name "*html" -type f -print0 | xargs -0 grep -H'
+alias cssgrep='find . -name "*css" -type f -print0 | xargs -0 grep -H'
+alias sgrep='find . -type f -print0 | xargs -0 grep -H'
+# find . -name \*.cc -print0 -or -name \*.h -print0 -maxdepth 1 | xargs -0 grep "hello"
 #
 # Git aliases from the oh-my-zsh plugin, which are not included in the bash-it framework
 #
