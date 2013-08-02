@@ -51,6 +51,7 @@ export PATH=/usr/local/bin:$PATH
 export PATH=/usr/bin:$PATH
 export PATH=/bin:$PATH
 export PATH=/usr/sbin:$PATH
+export PATH=/Applications/MAMP/bin/php/php5.4.10/bin:$PATH
 export PATH=/sbin:$PATH # Heroku: https://toolbelt.heroku.com/standalone
 
 # export PATH="$(brew --prefix coreutils)/libexec/gnubin:/usr/local/bin:$/usr/local/heroku/bin:PATH"

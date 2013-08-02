@@ -1,11 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/Users/branislav.vladisavljev/Sites/BackboneGenerator/backbone-boilerplate/vendor/bower_components'
-let g:netrw_dirhist_2='/Users/branislav.vladisavljev/Sites/Pagoda/test/zany-zita/app/View/Themed/Cakestarter-Bootstrap'
-let g:netrw_dirhist_3='/Users/branislav.vladisavljev/.subversion'
-let g:netrw_dirhist_4='/Users/branislav.vladisavljev/.oh-my-zsh'
-let g:netrw_dirhist_5='/Users/branislav.vladisavljev/Sites/Pagoda/zany-zita/app/Controller/Component'
-let g:netrw_dirhist_6='/Users/branislav.vladisavljev/.adobe'
-let g:netrw_dirhist_7='/Users/branislav.vladisavljev/dotfiles/.vim/bundle'
-let g:netrw_dirhist_8='/Users/branislav.vladisavljev/Sites/Heroku/bitstarter-lecture7'
-let g:netrw_dirhist_9='/Users/branislav.vladisavljev'
+let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_1='/Applications/MAMP/conf/apache'
