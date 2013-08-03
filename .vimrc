@@ -58,12 +58,17 @@ noremap <leader>o <Esc>:CommandT<CR>
 noremap <leader>O <Esc>:CommandTFlush<CR>
 noremap <leader>m <Esc>:CommandTBuffer<CR>
 
+" gcc comment
 map <leader>c <c-_><c-_>
+
+" nerdtree
 map <C-n> :NERDTreeToggle<CR>
+
+" fuzzyfinder
 map ,f :FufFile<CR>
 map ,b :FufBuffer<CR>
+
 " vim-textmanip
- 
 vmap <C-j> <Plug>(textmanip-move-down)
 vmap <C-k> <Plug>(textmanip-move-up)
 vmap <C-h> <Plug>(textmanip-move-left)
