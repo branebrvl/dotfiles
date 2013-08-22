@@ -10,6 +10,7 @@ alias mysqld_safe='/Applications/MAMP/Library/bin/mysqld'
 export EDITOR="vim"
 # export GIT_EDITOR="vim"
 # export GIT_EXTERNAL_DIFF="vimdiff"
+export SVN_MERGE="vim -d"
 export SVN_EDITOR="vim"
 export GREP_OPTIONS="--exclude-dir=\*/.svn/\* --exclude-dir=\*/.hg/\* --exclude-dir=\*/.git/\*"
 
@@ -19,7 +20,10 @@ alias htmlgrep='find . -name "*html" -type f -print0 | xargs -0 grep -H'
 alias cssgrep='find . -name "*css" -type f -print0 | xargs -0 grep -H'
 alias sgrep='find . -type f -print0 | xargs -0 grep -H'
 # find . -name \*.cc -print0 -or -name \*.h -print0 -maxdepth 1 | xargs -0 grep "hello"
-#
+
+# Remove deleted files from svn repo.
+alias svnrmex "svn st | grep '^!' | awk '{print $2}' | xargs svn delete --force"
+
 # Git aliases from the oh-my-zsh plugin, which are not included in the bash-it framework
 #
 alias g='git'
@@ -96,3 +100,6 @@ alias ...='cd ../../'
 # sed 's/foo/bar/g' filename         # standard replace command
 # sed '/foo/ s/foo/bar/g' filename   # executes more quickly
 # sed '/foo/ s//bar/g' filename      # shorthand sed syntax
+# svn st | grep '^!' | awk '{print $2}' | xargs svn delete --force
+# svn remove --force filename
+# svn log -v | less
