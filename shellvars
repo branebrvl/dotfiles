@@ -1,0 +1,13 @@
+# Set my editor and git editor
+export EDITOR="vim"
+# export GIT_EDITOR="vim"
+# export GIT_EXTERNAL_DIFF="vimdiff"
+export SVN_MERGE="vim -d"
+export SVN_EDITOR="vim"
+export GREP_OPTIONS="--exclude-dir=\*/.svn/\* --exclude-dir=\*/.hg/\* --exclude-dir=\*/.git/\*"
+
+# Colors ----------------------------------------------------------
+export TERM=xterm-color
+export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
+export CLICOLOR=1
+export LSCOLORS=GxFxCxDxBxegedabagaced
