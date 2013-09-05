@@ -53,7 +53,7 @@ symlinkifne .gitconfig
 
 cd dotfiles/
 
-echo "\n\n Initializing submodules..."
+echo "Initializing submodules..."
 git submodule init && git submodule update
 
 popd
@@ -62,4 +62,4 @@ chsh -s `which zsh`
 /usr/bin/env zsh
 source ~/.zshrc
 
-echo "\n\n Dotfiles are now installed."
+echo "Dotfiles are now installed."
