@@ -52,3 +52,6 @@
 [submodule "vim-phpdoc"]
 	path = vim/bundle/vim-phpdoc
 	url = https://github.com/stephpy/vim-phpdoc.git
+[submodule "vim/bundle/jasmine"]
+	path = vim/bundle/jasmine
+	url = git://github.com/claco/jasmine.vim.git
