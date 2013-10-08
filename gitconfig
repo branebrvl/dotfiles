@@ -2,7 +2,7 @@
   name = branislav.vladisavljev
   email = branebrvl@gmail.com
 [diff]
-  external = git_diff_wrapper
+  ; external = git_diff_wrapper
 [pager]
   diff =
 [color]

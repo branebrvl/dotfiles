@@ -1,4 +1,5 @@
 source ~/.profile
+# ps aux
 # setopt glob_dots
 # unsetopt glob_dots
 # find -type f -name '*js' -print0 | xargs -0 grep -l -i 'asdf' # will list all js files containing the string asdf under the current directory
