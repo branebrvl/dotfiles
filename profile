@@ -5,3 +5,4 @@ source ~/.shellvars
 source ~/.shellpaths
 source ~/.shellaliases
 # source ~/.shellactivities
+source ~/.nvm/nvm.sh

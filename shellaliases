@@ -11,6 +11,7 @@ alias mysqladmin='/Applications/MAMP/Library/bin/mysqladmin'
 alias mysqldump='/Applications/MAMP/Library/bin/mysqldump'
 alias mysqld_safe='/Applications/MAMP/Library/bin/mysqld_safe'
 alias mysqld_safe='/Applications/MAMP/Library/bin/mysqld'
+alias apachectl='/Applications/MAMP/Library/bin/apachectl'
 
 alias ..='cd ..'
 alias ...='cd ../../'

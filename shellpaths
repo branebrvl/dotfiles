@@ -7,3 +7,4 @@ export PATH=/usr/sbin:$PATH
 export PATH=/Applications/MAMP/bin/php/php5.4.10/bin:$PATH
 export PATH=/sbin:$PATH # Heroku: https://toolbelt.heroku.com/standalone
 export PATH=/usr/local/bin:$PATH
+export PATH=/usr/local/smlnj/bin:$PATH

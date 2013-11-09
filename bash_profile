@@ -11,3 +11,7 @@ source ~/.profile
 # svn st | grep '^!' | awk '{print $2}' | xargs svn delete --force
 # svn remove --force filename
 # svn log -v | less
+
+# find out on which port is running an app
+# lsof -n | grep TCP | grep LISTEN
+# lsof -t -i:4444

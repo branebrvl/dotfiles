@@ -55,3 +55,6 @@
 [submodule "vim/bundle/jasmine"]
 	path = vim/bundle/jasmine
 	url = git://github.com/claco/jasmine.vim.git
+[submodule "vim/bundle/vim-jst"]
+	path = vim/bundle/vim-jst
+	url = https://github.com/briancollins/vim-jst.git
