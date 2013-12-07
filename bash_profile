@@ -15,3 +15,6 @@ source ~/.profile
 # find out on which port is running an app
 # lsof -n | grep TCP | grep LISTEN
 # lsof -t -i:4444
+
+# view a prev revison
+# svn cat -r 1234 file | less

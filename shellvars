@@ -7,7 +7,9 @@ export SVN_EDITOR="vim"
 export GREP_OPTIONS="--exclude-dir=\*/.svn/\* --exclude-dir=\*/.hg/\* --exclude-dir=\*/.git/\*"
 
 # Colors ----------------------------------------------------------
-export TERM=xterm-color
+export TERM=xterm-256color 
+# xterm-color
+
 export GREP_OPTIONS='--color=auto' GREP_COLOR='1;32'
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
