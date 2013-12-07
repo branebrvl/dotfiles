@@ -29,8 +29,14 @@ set nobackup
 set noswapfile
 
 " configure status line
-set laststatus=2
-set statusline=%f\ %y%m%{fugitive#statusline()}%=%l,%c%V
+" Always display the statusline in all windows
+set laststatus=2 
+" Hide the default mode text (e.g. -- INSERT -- below the statusline)
+set noshowmode 
+" load powerline
+" set statusline=%f\ %y%m%{fugitive#statusline()}%=%l,%c%V
+set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim 
+let g:Powerline_symbols = 'fancy'
 
 execute pathogen#infect()
 

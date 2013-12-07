@@ -50,6 +50,7 @@ symlinkifne .oh-my-zsh
 symlinkifne .vimrc
 symlinkifne .zshrc
 symlinkifne .gitconfig
+symlinkifne .tmux.conf
 
 cd dotfiles/
 
