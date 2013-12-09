@@ -48,6 +48,10 @@ let g:syntastic_check_on_open=1
 let g:syntastic_error_symbol='✗'
 let g:syntastic_warning_symbol='⚠'
 
+" vim-css-color plugin
+" used when updatetime value set by plugin (100ms) is interfering with your configuration.
+let g:cssColorVimDoNotMessMyUpdatetime = 1
+
 " vim-jsbeautify
 autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
 
