@@ -1,7 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_cnt =7
 let g:netrw_dirhist_1='/Applications/MAMP/conf/apache'
 let g:netrw_dirhist_2='/Users/branislav.vladisavljev/Sites/BackboneGenerator/tesstng-backbone-generator'
 let g:netrw_dirhist_3='/Users/branislav.vladisavljev/Projects/VagrantPlayground/vagrant_getting_started/.vagrant'
 let g:netrw_dirhist_4='/Users/branislav.vladisavljev/Projects/setup-ubuntu-shell'
 let g:netrw_dirhist_5='/Users/branislav.vladisavljev/Sites/BackboneGenerator/generator-backbone/.git'
+let g:netrw_dirhist_6='/usr/lib'
+let g:netrw_dirhist_7='/Applications/MAMP/Library/lib'

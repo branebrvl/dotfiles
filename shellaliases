@@ -1,4 +1,5 @@
 # safety
+# safety
 # alias rm="rm -i"
 # alias mv="mv -i"
 # alias cp="cp -i"
@@ -9,22 +10,23 @@ alias c='clear'
 alias mysql='/Applications/MAMP/Library/bin/mysql'
 alias mysqladmin='/Applications/MAMP/Library/bin/mysqladmin'
 alias mysqldump='/Applications/MAMP/Library/bin/mysqldump'
-alias mysqld_safe='/Applications/MAMP/Library/bin/mysqld_safe'
-alias mysqld_safe='/Applications/MAMP/Library/bin/mysqld'
-alias apachectl='/Applications/MAMP/Library/bin/apachectl'
 
 alias ..='cd ..'
 alias ...='cd ../../'
+
+# Laravel artisan
+alias artisan='php artisan'
 
 alias jsgrep='find . -name "*js" -type f -print0 | xargs -0 grep -H'
 alias phpgrep='find . -name "*php" -type f -print0 | xargs -0 grep -H'
 alias htmlgrep='find . -name "*html" -type f -print0 | xargs -0 grep -H'
 alias cssgrep='find . -name "*css" -type f -print0 | xargs -0 grep -H'
+alias lessgrep='find . -name "*less" -type f -print0 | xargs -0 grep -H'
 alias sgrep='find . -type f -print0 | xargs -0 grep -H'
 # find . -name \*.cc -print0 -or -name \*.h -print0 -maxdepth 1 | xargs -0 grep "hello"
 
 # Remove deleted files from svn repo.
-alias svnrmex "svn st | grep '^!' | awk '{print $2}' | xargs svn delete --force"
+alias svnrmex="svn st | grep '^!' | awk '{print $2}' | xargs svn delete --force"
 
 # Git aliases from the oh-my-zsh plugin, which are not included in the bash-it framework
 #

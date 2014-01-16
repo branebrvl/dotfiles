@@ -42,6 +42,9 @@ execute pathogen#infect()
 
 filetype plugin indent on
 syntax enable
+set background=dark
+" colorscheme solarized
+colorscheme xoria256
 
 let g:syntastic_enable_signs=1
 let g:syntastic_check_on_open=1
@@ -51,6 +54,9 @@ let g:syntastic_warning_symbol='⚠'
 " vim-css-color plugin
 " used when updatetime value set by plugin (100ms) is interfering with your configuration.
 let g:cssColorVimDoNotMessMyUpdatetime = 1
+
+" vim-laravel-4-snippet
+" autocmd FileType php set ft=php.laravel
 
 " vim-jsbeautify
 autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
@@ -76,6 +82,9 @@ noremap <leader>o <Esc>:CommandT<CR>
 noremap <leader>O <Esc>:CommandTFlush<CR>
 noremap <leader>m <Esc>:CommandTBuffer<CR>
 
+" easy escaping to normal mode
+imap jj <esc>
+
 " gcc comment
 map <leader>c <c-_><c-_>
 
@@ -94,6 +103,13 @@ vmap <C-l> <Plug>(textmanip-move-right)
  
 vmap <C-c> <Plug>(textmanip-duplicate-down)
 nmap <C-c> <Plug>(textmanip-duplicate-down)
+
+nmap <C-h> <C-w>h
+nmap <C-j> <C-w>j
+nmap <C-k> <C-w>k
+nmap <C-l> <C-w>l
+
+highlight Search cterm=underline
 
 " Use jshint (uses ~/.jshintrc)
 let g:syntastic_javascript_checkers = ['jshint']
