@@ -79,3 +79,6 @@
 [submodule "vim/bundle/vim-laravel4-snippets"]
 	path = vim/bundle/vim-laravel4-snippets
 	url = https://github.com/markwu/vim-laravel4-snippets.git
+[submodule "vim/bundle/emmet-vim"]
+	path = vim/bundle/emmet-vim
+	url = https://github.com/mattn/emmet-vim.git
