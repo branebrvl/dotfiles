@@ -178,7 +178,7 @@ if [[ $needdb == 'Y' ]]
         fi
 
         echo -e "-- Updating database configuration file\n"
-        sed -i "s/'database'  => 'database',/'database'  => '$database',/g" app/config/local/database.php
+        sed -i "s/'database'  => '',/'database'  => '$database',/g" app/config/local/database.php
         sed -i "s/'password'  => '',/'password'  => '$passworddb',/g" app/config/local/database.php
 
 fi

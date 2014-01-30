@@ -77,11 +77,6 @@ let g:html_indent_inctags = "html,body,head,tbody"
 let g:html_indent_script1 = "inc"
 let g:html_indent_style1 = "inc"
 
-" Faster commenting for T-Comment plugin
-noremap <leader>o <Esc>:CommandT<CR>
-noremap <leader>O <Esc>:CommandTFlush<CR>
-noremap <leader>m <Esc>:CommandTBuffer<CR>
-
 " easy escaping to normal mode
 imap jj <esc>
 
@@ -90,10 +85,6 @@ map <leader>c <c-_><c-_>
 
 " nerdtree
 map <C-n> :NERDTreeToggle<CR>
-
-" fuzzyfinder
-map ,f :FufFile<CR>
-map ,b :FufBuffer<CR>
 
 " vim-textmanip
 vmap <C-j> <Plug>(textmanip-move-down)
@@ -108,6 +99,9 @@ nmap <C-h> <C-w>h
 nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
+
+" tagbar Vim plugin that displays tags in a window, ordered by class
+nmap ,b :TagbarToggle<CR>
 
 highlight Search cterm=underline
 
