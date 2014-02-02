@@ -71,7 +71,7 @@ if [[ $devtools == "Y" ]]
         composer update
 
         echo -e "-- $COL_GREEN Updating CTags... $COL_RESET"
-        ctags -R -f .tags
+        ctags -R
 
         echo "\n"
 fi
@@ -112,18 +112,17 @@ cat <<'EOF' > app/config/local/app.php
 <?php return [
 	  
     'debug' => true,
-
-    'providers' => [
-         'Clockwork\Support\Laravel\ClockworkServiceProvider',
-         'Way\Generators\GeneratorsServiceProvider',
-     ],
-
+    // specify require-dev aliases, service proveders are specifed in start/local.php
     'aliases' => ['Clockwork' => 'Clockwork\Support\Laravel\Facade'],
 ];
 EOF
 
 cat <<'EOF' > app/start/local.php
 <?php
+
+// specify require-dev service providers, aliases are specifed in app/config/local/app.php
+App::register( 'Clockwork\Support\Laravel\ClockworkServiceProvider' );
+App::register( 'Way\Generators\GeneratorsServiceProvider' );
 
 function l($val)
 {
