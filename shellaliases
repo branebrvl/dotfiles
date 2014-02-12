@@ -7,12 +7,6 @@
 alias la='ls -alhG'
 alias ll='ll -alrth'
 alias c='clear'
-alias mysql='/Applications/MAMP/Library/bin/mysql'
-alias mysqladmin='/Applications/MAMP/Library/bin/mysqladmin'
-alias mysqldump='/Applications/MAMP/Library/bin/mysqldump'
-# start apache & mysql
-alias start='sudo /Applications/MAMP/bin/start.sh'
-alias stop='sudo /Applications/MAMP/bin/stop.sh'
 
 alias ..='cd ..'
 alias ...='cd ../../'
