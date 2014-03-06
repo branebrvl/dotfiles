@@ -55,9 +55,6 @@
 [submodule "vim/bundle/vim-jst"]
 	path = vim/bundle/vim-jst
 	url = https://github.com/briancollins/vim-jst.git
-[submodule "vim/bundle/powerline"]
-	path = vim/bundle/powerline
-	url = https://github.com/Lokaltog/powerline.git
 [submodule "osx-terminal.app-colors-solarized"]
 	path = osx-terminal.app-colors-solarized
 	url = https://github.com/tomislav/osx-terminal.app-colors-solarized.git
@@ -70,9 +67,9 @@
 [submodule "vim/bundle/vim-css3-syntax"]
 	path = vim/bundle/vim-css3-syntax
 	url = https://github.com/hail2u/vim-css3-syntax.git
-[submodule ".fonts/powerline-fonts"]
-	path = .fonts/powerline-fonts
-	url = https://github.com/Lokaltog/powerline-fonts.git
+[submodule "vim/bundle/powerline"]
+  path = vim/bundle/powerline
+  url = https://github.com/Lokaltog/powerline.git
 [submodule "vim/bundle/vim-laravel4-snippets"]
 	path = vim/bundle/vim-laravel4-snippets
 	url = https://github.com/markwu/vim-laravel4-snippets.git
@@ -88,3 +85,6 @@
 [submodule "vim/bundle/tcomment_vim"]
 	path = vim/bundle/tcomment_vim
 	url = https://github.com/tomtom/tcomment_vim.git
+[submodule ".fonts/powerline-fonts"]
+	path = .fonts/powerline-fonts
+	url = https://github.com/Lokaltog/powerline-fonts.git
