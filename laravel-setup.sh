@@ -10,8 +10,7 @@
 # - Added update database password (database.php)
 # - Added support for supplying appname as paramater to script
 # - Added Faker package
-# - Make sure gsed is installed if using OSX (install via Homebrew)
-#   $ brew install gnu-sed
+# - Make sure sed is installed if using OSX (install via Homebrew)
 
 
 # Colors
@@ -85,8 +84,8 @@ read -e development
 if [[ $development == "Y" ]]
     then
         sed -i -e'27,31d' bootstrap/start.php
-        # sed -i "26 a\ \$env = \$app->detectEnvironment(function() { return getenv('ENV') ?: 'development'; });" bootstrap/start.php
-        sed -i "26 a\ \$env = \$app->detectEnvironment(function() { return isset(\$_ENV['LARAVEL_ENV']) ? \$_ENV['LARAVEL_ENV'] : 'local'; });" bootstrap/start.php
+        sed -i "26 a\ \$env = \$app->detectEnvironment(function() { return getenv('LARAVEL_ENV') ?: 'local'; });" bootstrap/start.php
+        # sed -i "26 a\ \$env = \$app->detectEnvironment(function() { return isset(\$_ENV['LARAVEL_ENV']) ? \$_ENV['LARAVEL_ENV'] : 'local'; });" bootstrap/start.php
 
 fi
 
@@ -140,23 +139,26 @@ function stop($name)
 }
 EOF
 
-cat <<'EOF' > app/config/local/database.php
-<?php return [
-	  
-    'connections' => [
-      'mysql' => [
-        'driver'    => 'mysql',
-        'host'      => 'localhost',
-        'database'  => '',
-        'username'  => 'root',
-        'password'  => '',
-        'charset'   => 'utf8',
-        'collation' => 'utf8_unicode_ci',
-        'prefix'    => '',
-      ],
-    ]
-];
-EOF
+# cat <<'EOF' > app/config/local/database.php
+# <?php return [
+# 	  
+#     'connections' => [
+#       'mysql' => [
+#         'driver'    => 'mysql',
+#         'host'      => 'localhost',
+#         'database'  => '',
+#         'username'  => 'root',
+#         'password'  => '',
+#         'charset'   => 'utf8',
+#         'collation' => 'utf8_unicode_ci',
+#         'prefix'    => '',
+#       ],
+#     ]
+# ];
+# EOF
+
+
+sed -i "s/'debug' => true,/'debug' => false,/g" app/config/app.php
 
 # Create mysql database
 echo -e -n "$COL_BLUE Does you app need a database $YN_PROMPT "
@@ -168,29 +170,40 @@ if [[ $needdb == 'Y' ]]
 
         echo -e -n "$COL_MAGENTA    Would you like to create database in MySQL $YN_PROMPT "
         read -e createdb
-        echo -e -n "$COL_MAGENTA    Password:$YN_PROMPT "
+        echo -e -n "$COL_MAGENTA    Password:$COL_RESET"
         read -e passworddb
         if [[ $createdb == 'Y' ]]
             then
                 echo "-- Creating MySQL database"
-                mysql -uroot -p$passworddb -e "CREATE DATABASE \`$DATABASE\`"
+                mysql -uroot -p$passworddb -e "CREATE DATABASE \`$database\`"
         fi
 
         echo -e "-- Updating database configuration file\n"
-        sed -i "s/'database'  => '',/'database'  => '$database',/g" app/config/local/database.php
-        sed -i "s/'password'  => '',/'password'  => '$passworddb',/g" app/config/local/database.php
+        sed -i "s/'host'      => 'localhost',/'host'      => getenv('L4_DB_HOST'),/g" app/config/database.php
+        sed -i "s/'database'  => 'database',/'database'  => getenv('L4_DB_DATABASE'),/g" app/config/database.php
+        sed -i "s/'username'  => 'root',/'username'  => getenv('L4_DB_USERNAME'),/g" app/config/database.php
+        sed -i "s/'password'  => '',/'password'  => getenv('L4_DB_PASSWORD'),/g" app/config/database.php
 
-fi
+        # sed -i "s/'database'  => '',/'database'  => '$database',/g" app/config/local/database.php
+        # sed -i "s/'password'  => '',/'password'  => '$passworddb',/g" app/config/local/database.php
 
-echo -e -n "$COL_BLUE Do you need a users table $YN_PROMPT "
-read -e userstable
-if [[ $userstable == 'Y' ]]
-    then
-        echo "-- Creating Users Table"
-        php artisan generate:migration create_users_table --fields="username:string:unique, email:string:unique, password:string"
+cat <<EOF > .env.local.php
+<?php return [
+        'L4_DB_HOST'      => 'localhost',     
+        'L4_DB_DATABASE'  => '$database',
+        'L4_DB_USERNAME'  => 'root', 
+        'L4_DB_PASSWORD'  => '$passworddb', 
+];
+EOF
 
-        echo "-- Migrating the database"
-        php artisan migrate
+cat <<EOF > .env.vagrant.php
+<?php return [
+        'L4_DB_HOST'      => '10.0.2.2',     
+        'L4_DB_DATABASE'  => '$database',
+        'L4_DB_USERNAME'  => 'root', 
+        'L4_DB_PASSWORD'  => '$passworddb', 
+];
+EOF
 
 fi
 

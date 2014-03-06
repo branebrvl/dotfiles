@@ -1,5 +1,7 @@
 # Set my editor and git editor
 export EDITOR="vim"
+export BUNDLE_EDITOR="vim"
+export VISUAL="VIM"
 # export GIT_EDITOR="vim"
 # export GIT_EXTERNAL_DIFF="vimdiff"
 # export SVN_MERGE="vim -d"

@@ -40,18 +40,29 @@ echo "DOTFILESDIRRELATIVETOHOME = $DOTFILESDIRRELATIVETOHOME"
 
 pushd ~
 
+
+# get prezto
+git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+# Create a new Zsh configuration by copying the Zsh configuration files provided
+setopt EXTENDED_GLOB
+for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
+    ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
+done
+
 symlinkifne .shellvars
 symlinkifne .shellpaths
 symlinkifne .shellaliases
 symlinkifne .profile
 symlinkifne .bash_profile
 symlinkifne .vim
-symlinkifne .oh-my-zsh
+# symlinkifne .oh-my-zsh
+symlinkifne .zpreztorc
 symlinkifne .vimrc
 symlinkifne .zshrc
 symlinkifne .gitconfig
 symlinkifne .tmux.conf
 
+ln -s dotfiles/prompt_superlinh_setup "${ZDOTDIR:-$HOME}"/.zprezto/modules/prompt/functions/prompt_superlinh_setup
 cd dotfiles/
 
 echo "Initializing submodules..."
