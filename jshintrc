@@ -1,0 +1,16 @@
+{
+    "globals" : {
+        "es3": true,
+        "define": true,
+        "require": true,
+        "jQuery" : true,
+        "Backbone" : true,
+        "log" : true,
+        "createjs" : true,
+        "_" : true,
+        "TweenMax" : true,
+        "Power2" : true,
+        "TimelineLite" : true,
+        "$" : true
+    }
+}

@@ -103,6 +103,11 @@ nmap <C-l> <C-w>l
 " tagbar Vim plugin that displays tags in a window, ordered by class
 nmap ,b :TagbarToggle<CR>
 
+" PDV (phpDocumentor for Vim) 
+nmap ,p :call PhpDocSingle()<CR>
+nmap ,P :call PhpDocRange()<CR>
+let g:pdv_cfg_Author = "Branislav Vladisavljev"
+
 highlight Search cterm=underline
 
 " Use jshint (uses ~/.jshintrc)
