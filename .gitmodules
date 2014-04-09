@@ -1,6 +1,3 @@
-[submodule "oh-my-zsh"]
-    path = oh-my-zsh
-    url = https://github.com/robbyrussell/oh-my-zsh.git
 [submodule "nerdtree"]
     path = vim/bundle/nerdtree
     url = https://github.com/scrooloose/nerdtree.git
@@ -22,9 +19,6 @@
 [submodule "vim-jsbeautify"]
     path = vim/bundle/vim-jsbeautify
     url = https://github.com/maksimr/vim-jsbeautify.git
-[submodule "vim-matchit"]
-    path = vim/bundle/vim-matchit
-    url = https://github.com/jwhitley/vim-matchit.git 
 [submodule "vim-snipmate"]
     path = vim/bundle/vim-snipmate
     url = https://github.com/garbas/vim-snipmate.git
@@ -70,9 +64,6 @@
 [submodule "vim/bundle/powerline"]
   path = vim/bundle/powerline
   url = https://github.com/Lokaltog/powerline.git
-[submodule "vim/bundle/vim-laravel4-snippets"]
-	path = vim/bundle/vim-laravel4-snippets
-	url = https://github.com/markwu/vim-laravel4-snippets.git
 [submodule "vim/bundle/emmet-vim"]
 	path = vim/bundle/emmet-vim
 	url = https://github.com/mattn/emmet-vim.git
