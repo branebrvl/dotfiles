@@ -69,8 +69,16 @@ cd dotfiles/
 
 echo "Initializing submodules..."
 git submodule init && git submodule update
+echo "Submodules installed"
 
 popd
+
+#  Ubuntu-only stuff.
+if   [[ "$(cat /etc/issue 2> /dev/null)" =~ Ubuntu ]]; then
+echo ">>> Installing zsh"
+# Install zsh
+sudo apt-get install -y zsh
+fi  
 
 chsh -s `which zsh`
 /usr/bin/env zsh
