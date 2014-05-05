@@ -110,6 +110,10 @@ let g:pdv_cfg_Author = "Branislav Vladisavljev"
 
 highlight Search cterm=underline
 
+" highlights the background in a subtle red for text that goes over the 80 column limit
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%81v.\+/
+
 " Use jshint (uses ~/.jshintrc)
 let g:syntastic_javascript_checkers = ['jshint']
 

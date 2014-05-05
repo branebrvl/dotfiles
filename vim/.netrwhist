@@ -1,8 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_cnt =7
 let g:netrw_dirhist_1='/Users/branislav.vladisavljev/.zprezto'
 let g:netrw_dirhist_2='/Applications/MAMP/logs'
 let g:netrw_dirhist_3='/Users/branislav.vladisavljev/Sites/Laravel4/l4-incremental-apis'
 let g:netrw_dirhist_4='/usr/local/etc/php/5.4/conf.d'
 let g:netrw_dirhist_5='/Users/branislav.vladisavljev/Sites/Laravel4/laravel-tricks'
 let g:netrw_dirhist_6='/Users/branislav.vladisavljev/Projects'
+let g:netrw_dirhist_7='/Users/branislav.vladisavljev/.ssh'

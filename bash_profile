@@ -9,6 +9,7 @@ source ~/.profile
 # sed '/foo/ s/foo/bar/g' filename   # executes more quickly
 # sed '/foo/ s//bar/g' filename      # shorthand sed syntax
 # svn st | grep '^!' | awk '{print $2}' | xargs svn delete --force
+# svn status | grep -v "^.[ \t]*\..*" | grep "^?" | awk '{print $2}' | xargs svn add
 # svn remove --force filename
 # svn log -v | less
 

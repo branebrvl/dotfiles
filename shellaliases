@@ -14,12 +14,12 @@ alias ...='cd ../../'
 # Laravel artisan
 alias artisan='php artisan'
 
-alias jsgrep='find . -name "*js" -type f -print0 | xargs -0 grep -H'
-alias phpgrep='find . -name "*php" -type f -print0 | xargs -0 grep -H'
-alias htmlgrep='find . -name "*html" -type f -print0 | xargs -0 grep -H'
-alias cssgrep='find . -name "*css" -type f -print0 | xargs -0 grep -H'
-alias lessgrep='find . -name "*less" -type f -print0 | xargs -0 grep -H'
-alias sgrep='find . -type f -print0 | xargs -0 grep -H'
+alias jsgrep='find . -name "*js" -type f -print0 | xargs -0 grep -Hn'
+alias phpgrep='find . -name "*php" -type f -print0 | xargs -0 grep -Hn'
+alias htmlgrep='find . -name "*html" -type f -print0 | xargs -0 grep -Hn'
+alias cssgrep='find . -name "*css" -type f -print0 | xargs -0 grep -Hn'
+alias lessgrep='find . -name "*less" -type f -print0 | xargs -0 grep -Hn'
+alias sgrep='find . -type f -print0 | xargs -0 grep -Hn'
 # find . -name \*.cc -print0 -or -name \*.h -print0 -maxdepth 1 | xargs -0 grep "hello"
 
 # Remove deleted files from svn repo.
