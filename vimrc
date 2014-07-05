@@ -77,6 +77,12 @@ let g:html_indent_inctags = "html,body,head,tbody"
 let g:html_indent_script1 = "inc"
 let g:html_indent_style1 = "inc"
 
+" Same with the colon and semicolon; colon is used very often
+nnoremap : ;
+nnoremap ; :
+vnoremap : ;
+vnoremap ; :
+
 " easy escaping to normal mode
 imap jj <esc>
 
@@ -84,7 +90,8 @@ imap jj <esc>
 map <leader>c <c-_><c-_>
 
 " nerdtree
-map <C-n> :NERDTreeToggle<CR>
+" map <C-n> :NERDTreeToggle<CR>
+nnoremap <silent> <C-n> :NERDTreeToggle<CR>
 
 " vim-textmanip
 vmap <C-j> <Plug>(textmanip-move-down)
@@ -101,11 +108,11 @@ nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
 
 " tagbar Vim plugin that displays tags in a window, ordered by class
-nmap ,b :TagbarToggle<CR>
+nnoremap <silent> ,b :TagbarToggle<CR>
 
 " PDV (phpDocumentor for Vim) 
-nmap ,p :call PhpDocSingle()<CR>
-nmap ,P :call PhpDocRange()<CR>
+nnoremap <silent> ,p :call PhpDocSingle()<CR>
+nnoremap <silent> ,P :call PhpDocRange()<CR>
 let g:pdv_cfg_Author = "Branislav Vladisavljev"
 
 highlight Search cterm=underline
