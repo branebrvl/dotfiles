@@ -89,6 +89,13 @@ imap jj <esc>
 " gcc comment
 map <leader>c <c-_><c-_>
 
+" vim-php-namespace
+" Automatically adds the corresponding use statement for the class under 
+" the cursor.
+noremap <Leader>u :call PhpInsertUse()<CR>
+" Expands the class name under the cursor to its fully qualified name.
+noremap <Leader>e :call PhpExpandClass()<CR>
+
 " nerdtree
 " map <C-n> :NERDTreeToggle<CR>
 nnoremap <silent> <C-n> :NERDTreeToggle<CR>
