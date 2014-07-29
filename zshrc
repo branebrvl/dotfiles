@@ -12,3 +12,6 @@ fi
 
 # Customize to your needs...
 source ~/.profile
+
+# enable shims and autocompletion
+eval "$(rbenv init -)"

@@ -9,3 +9,4 @@ export PATH=/sbin:$PATH # Heroku: https://toolbelt.heroku.com/standalone
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/smlnj/bin:$PATH
 export PATH=$HOME/.composer/vendor/bin:$PATH
+export PATH=$HOME/.rbenv/bin:$PATH
