@@ -1,6 +1,6 @@
 [user]
-  name = branislav.vladisavljev
-  email = branebrvl@gmail.com
+  ; name = branislav.vladisavljev
+  ; email = branebrvl@gmail.com
 [diff]
   ; external = git_diff_wrapper
 [pager]
@@ -13,3 +13,9 @@
   ch = checkout -
 [credential]
 	helper = osxkeychain
+[user]
+	name = Branislav Vladisavljev
+[filter "media"]
+	clean = git media clean %f
+	smudge = git media smudge %f
+	required = true

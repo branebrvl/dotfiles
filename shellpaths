@@ -10,3 +10,16 @@ export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/smlnj/bin:$PATH
 export PATH=$HOME/.composer/vendor/bin:$PATH
 export PATH=$HOME/.rbenv/bin:$PATH
+
+
+export E8_CHEF_DIR="$HOME/.chef"
+export E8_CHEF_USER="brane"
+export KNIFE_VALIDATION_CLIENT_NAME="chef-validator"
+export KNIFE_CLIENT_KEY_PATH="$E8_CHEF_DIR/brane.pem"
+export KNIFE_VALIDATION_KEY_PATH="$E8_CHEF_DIR/chef-validator.pem"
+export KNIFE_CHEF_SERVER="https://chef.appfuel.net"
+export KNIFE_CACHE_PATH="$E8_CHEF_DIR/checksums"
+export KNIFE_CACHE_SYNTAX_CHECK_PATH="$E8_CHEF_DIR/syntax_check_cache"
+export KNIFE_COOKBOOK_EMAIL="branebrvl@gmail.com"
+export KNIFE_COOKBOOK_COPYRIGHT="Branislav Vladisavljev"
+export KNIFE_COOKBOOK_LICENSE="MIT"

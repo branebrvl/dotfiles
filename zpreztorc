@@ -35,6 +35,8 @@ zstyle ':prezto:load' pmodule \
   'editor' \
   'homebrew' \
   'osx' \
+  'git' \
+  'ruby' \
   'node' \
   'syntax-highlighting' \
   'tmux' \
@@ -42,8 +44,6 @@ zstyle ':prezto:load' pmodule \
 #
 # Editor
 #
-  # 'git' \
-  # 'ruby' \
   # 'rails' \
   # 'python' \
   # 'haskell' \
