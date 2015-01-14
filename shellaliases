@@ -4,6 +4,7 @@
 # alias mv="mv -i"
 # alias cp="cp -i"
 
+alias be='bundle exec'
 alias la='ls -alhG'
 alias ll='ll -alrth'
 alias c='clear'
