@@ -40,6 +40,15 @@ echo "DOTFILESDIRRELATIVETOHOME = $DOTFILESDIRRELATIVETOHOME"
 
 pushd ~
 
+#  Ubuntu-only stuff.
+if   [[ "$(cat /etc/issue 2> /dev/null)" =~ Ubuntu ]]; then
+echo ">>> Installing zsh"
+# Install zsh
+sudo apt-get install -y zsh
+fi  
+
+#launch zsh
+zsh
 
 # get prezto
 git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
@@ -73,15 +82,7 @@ echo "Submodules installed"
 
 popd
 
-#  Ubuntu-only stuff.
-if   [[ "$(cat /etc/issue 2> /dev/null)" =~ Ubuntu ]]; then
-echo ">>> Installing zsh"
-# Install zsh
-sudo apt-get install -y zsh
-fi  
-
-chsh -s `which zsh`
-/usr/bin/env zsh
+chsh -s /bin/zsh
 source ~/.zshrc
 
 echo "Dotfiles are now installed."
