@@ -34,11 +34,11 @@ function symlinkifne {
 echo "This script must be run from the dotfiles directory"
 echo "Setting up..."
 
-#export DOTFILESDIRRELATIVETOHOME=$PWD
+export DOTFILESDIRRELATIVETOHOME=$PWD
 export DOTFILESDIRRELATIVETOHOME=dotfiles
 echo "DOTFILESDIRRELATIVETOHOME = $DOTFILESDIRRELATIVETOHOME"
 
-pushd ~
+pushd $HOME
 
 #  Ubuntu-only stuff.
 if   [[ "$(cat /etc/issue 2> /dev/null)" =~ Ubuntu ]]; then
@@ -53,14 +53,14 @@ zsh
 # get prezto
 git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 # Create a new Zsh configuration by copying the Zsh configuration files provided
-ln -s ~/.zprezto/runcoms/zlogin ~/.zlogin
-ln -s ~/.zprezto/runcoms/zlogout ~/.zlogout
-ln -s ~/.zprezto/runcoms/zpreztorc ~/.zpreztorc
-ln -s ~/.zprezto/runcoms/zprofile ~/.zprofile
-ln -s ~/.zprezto/runcoms/zshenv ~/.zshenv
-ln -s ~/.zprezto/runcoms/zshrc ~/.zshrc
+ln -s $HOME/.zprezto/runcoms/zlogin $HOME/.zlogin
+ln -s $HOME/.zprezto/runcoms/zlogout $HOME/.zlogout
+ln -s $HOME/.zprezto/runcoms/zpreztorc $HOME/.zpreztorc
+ln -s $HOME/.zprezto/runcoms/zprofile $HOME/.zprofile
+ln -s $HOME/.zprezto/runcoms/zshenv $HOME/.zshenv
+ln -s $HOME/.zprezto/runcoms/zshrc $HOME/.zshrc
 # Copy custom theme
-cp ~/dotfiles/prompt_superlinh_setup ~/.zprezto/modules/prompt/functions/prompt_superlinh_setup
+cp $HOME/dotfiles/prompt_superlinh_setup $HOME/.zprezto/modules/prompt/functions/prompt_superlinh_setup
 
 symlinkifne .shellvars
 symlinkifne .shellpaths
@@ -83,6 +83,6 @@ echo "Submodules installed"
 popd
 
 chsh -s /bin/zsh
-source ~/.zshrc
+source $HOME/.zshrc
 
 echo "Dotfiles are now installed."
