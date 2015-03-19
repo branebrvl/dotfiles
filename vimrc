@@ -41,10 +41,13 @@ let g:Powerline_symbols = 'fancy'
 execute pathogen#infect()
 
 filetype plugin indent on
+
+let g:solarized_termcolors=256
+let g:solarized_termtrans=1
 syntax enable
 set background=dark
-" colorscheme solarized
-colorscheme xoria256
+colorscheme solarized
+" colorscheme xoria256
 
 let g:syntastic_enable_signs=1
 let g:syntastic_check_on_open=1
