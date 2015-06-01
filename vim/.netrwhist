@@ -1,4 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_cnt =4
 let g:netrw_dirhist_1='/Users/branislav.vladisavljev/Projects/CentOS'
 let g:netrw_dirhist_2='/Users/branislav.vladisavljev/dotfiles'
+let g:netrw_dirhist_3='/Users/branislavvladisavljev/Sites/aircrm-operations-models/node_modules'
+let g:netrw_dirhist_4='/Users/branislavvladisavljev/Sites/drastic/trivia-race'

@@ -13,9 +13,14 @@
   ch = checkout -
 [credential]
 	helper = osxkeychain
-[user]
-	name = Branislav Vladisavljev
 [filter "media"]
 	required = true
 	clean = git media clean %f
 	smudge = git media smudge %f
+[user]
+	name = branebrvl
+	email = branebrvl@gmail.com
+[filter "hawser"]
+	clean = git hawser clean %f
+	smudge = git hawser smudge %f
+	required = true

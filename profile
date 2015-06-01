@@ -6,3 +6,4 @@ source ~/.shellpaths
 source ~/.shellaliases
 # source ~/.shellactivities
 source ~/.nvm/nvm.sh
+nvm use 0.10

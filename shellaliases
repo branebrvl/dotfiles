@@ -4,6 +4,9 @@
 # alias mv="mv -i"
 # alias cp="cp -i"
 
+# aircrm grunt taks
+alias aircrmgrunt='grunt --force --no-coverage --local'
+
 alias be='bundle exec'
 alias la='ls -alhG'
 alias ll='ll -alrth'
@@ -20,6 +23,8 @@ alias phpgrep='find . -name "*php" -type f -print0 | xargs -0 grep -Hn'
 alias htmlgrep='find . -name "*html" -type f -print0 | xargs -0 grep -Hn'
 alias cssgrep='find . -name "*css" -type f -print0 | xargs -0 grep -Hn'
 alias lessgrep='find . -name "*less" -type f -print0 | xargs -0 grep -Hn'
+alias jadegrep='find . -name "*jade" -type f -print0 | xargs -0 grep -Hn'
+alias sassgrep='find . -name "*scss" -type f -print0 | xargs -0 grep -Hn'
 alias sgrep='find . -type f -print0 | xargs -0 grep -Hn'
 # find . -name \*.cc -print0 -or -name \*.h -print0 -maxdepth 1 | xargs -0 grep "hello"
 

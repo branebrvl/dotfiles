@@ -131,7 +131,7 @@ highlight Search cterm=underline
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
 
-" Use jshint (uses ~/.jshintrc)
+" Use jshint (uses ~/.jshintrc if there is no local file)
 let g:syntastic_javascript_checkers = ['jshint']
 
 " Close vim if the only window left open is a NERDTree
