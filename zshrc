@@ -15,3 +15,6 @@ source ~/.profile
 
 # enable shims and autocompletion
 eval "$(rbenv init -)"
+
+export NVM_DIR="/Users/branislavvladisavljev/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
