@@ -24,3 +24,6 @@ export KNIFE_CACHE_SYNTAX_CHECK_PATH="$E8_CHEF_DIR/syntax_check_cache"
 export KNIFE_COOKBOOK_EMAIL="branebrvl@gmail.com"
 export KNIFE_COOKBOOK_COPYRIGHT="Branislav Vladisavljev"
 export KNIFE_COOKBOOK_LICENSE="MIT"
+
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
