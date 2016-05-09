@@ -70,10 +70,11 @@ autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
 " for css or scss
 autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
 
-" On by default, turn it off for html
+" On by default, turn it off for html and go
+let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
 let g:syntastic_mode_map = { 'mode': 'active',
 	 	\ 'active_filetypes': [],
- 		\ 'passive_filetypes': ['html'] }
+ 		\ 'passive_filetypes': ['html', 'go'] }
 
 " html indentation provided by Andy Wokula
 let g:html_indent_inctags = "html,body,head,tbody"
@@ -128,7 +129,7 @@ let g:pdv_cfg_Author = "Branislav Vladisavljev"
 highlight Search cterm=underline
 
 " highlights the background in a subtle red for text that goes over the 80 column limit
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+highlight OverLength ctermbg=gray ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
 
 " Use jshint (uses ~/.jshintrc if there is no local file)
@@ -137,3 +138,23 @@ let g:syntastic_javascript_checkers = ['jshint']
 " Close vim if the only window left open is a NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 :command NT  NERDTree
+
+
+" go-vim
+" Another issue with vim-go and syntastic is that the location list window that
+" contains the output of commands such as :GoBuild and :GoTest might not appear.
+" To resolve this:
+let g:go_list_type = "quickfix"
+" Or open the Godoc in browser
+au FileType go nmap <Leader>gb <Plug>(go-doc-browser)
+" Show a list of interfaces which is implemented by the type under your cursor with <leader>s
+au FileType go nmap <Leader>s <Plug>(go-implements)
+" Show type info for the word under your cursor with <leader>i (useful if you have disabled auto showing type info via g:go_auto_type_info)
+au FileType go nmap <Leader>i <Plug>(go-info)
+" By default syntax-highlighting for Functions, Methods and Structs is disabled. To change it:
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_interfaces = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
