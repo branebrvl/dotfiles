@@ -71,10 +71,11 @@ autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
 autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
 
 " On by default, turn it off for html and go
-let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
+" let g:syntastic_go_checkers = ['go', 'golint', 'govet', 'errcheck']
+let g:syntastic_go_checkers = ['govet']
 let g:syntastic_mode_map = { 'mode': 'active',
 	 	\ 'active_filetypes': [],
- 		\ 'passive_filetypes': ['html', 'go'] }
+ 		\ 'passive_filetypes': ['html'] }
 
 " html indentation provided by Andy Wokula
 let g:html_indent_inctags = "html,body,head,tbody"
@@ -145,12 +146,18 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 " contains the output of commands such as :GoBuild and :GoTest might not appear.
 " To resolve this:
 let g:go_list_type = "quickfix"
+" go test
+" au FileType go nmap <leader>t <Plug>(go-testj
+au FileType go noremap <Leader>t :w<cr>:!clear && go test<cr>
 " Or open the Godoc in browser
 au FileType go nmap <Leader>gb <Plug>(go-doc-browser)
 " Show a list of interfaces which is implemented by the type under your cursor with <leader>s
 au FileType go nmap <Leader>s <Plug>(go-implements)
 " Show type info for the word under your cursor with <leader>i (useful if you have disabled auto showing type info via g:go_auto_type_info)
 au FileType go nmap <Leader>i <Plug>(go-info)
+
+" Enable goimports to automatically insert import paths instead of gofmt:
+let g:go_fmt_command = "goimports"
 " By default syntax-highlighting for Functions, Methods and Structs is disabled. To change it:
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
@@ -158,3 +165,30 @@ let g:go_highlight_structs = 1
 let g:go_highlight_interfaces = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
+
+" https://github.com/Shougo/neocomplete.vim
+let g:neocomplete#enable_at_startup = 1
+" https://github.com/Shougo/neosnippet.vim
+" Plugin key-mappings.
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
+
+" SuperTab like snippets behavior.
+"imap <expr><TAB>
+" \ pumvisible() ? "\<C-n>" :
+" \ neosnippet#expandable_or_jumpable() ?
+" \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+
+" For conceal markers.
+if has('conceal')
+  set conceallevel=2 concealcursor=niv
+endif
+
+" Enable snipMate compatibility feature.
+let g:neosnippet#enable_snipmate_compatibility = 1
+
+" Tell Neosnippet about the other snippets
+let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
