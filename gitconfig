@@ -28,3 +28,11 @@
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
 	required = true
+[url "git@github.com:fenderdigital/go-pkg"]
+	insteadOf = https://github.com/fenderdigital/go-pkg
+[url "git@github.com:fenderdigital/ufo"]
+	insteadOf = https://github.com/fenderdigital/ufo
+[url "git@github.com:fenderdigital/go-fender"]
+	insteadOf = https://github.com/fenderdigital/go-fender
+[url "git@github.com:fenderdigital/fmic-utilities"]
+	insteadOf = https://github.com/fenderdigital/fmic-utilities

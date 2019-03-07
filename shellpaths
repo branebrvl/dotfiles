@@ -11,6 +11,9 @@ export PATH=/usr/local/smlnj/bin:$PATH
 export PATH=$HOME/.composer/vendor/bin:$PATH
 export PATH=$HOME/.rbenv/bin:$PATH
 export PATH=/usr/local/go/bin:$PATH
+export PATH=$HOME/phantomjs-2.1.1-macosx/bin:$PATH
+
+export NVM_DIR=$HOME/.nvm
 
 export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$PATH
@@ -28,3 +31,9 @@ export KNIFE_COOKBOOK_COPYRIGHT="Branislav Vladisavljev"
 export KNIFE_COOKBOOK_LICENSE="MIT"
 
 export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)
+
+
+# added by Anaconda3 5.0.1 installer
+export PATH=$HOME/anaconda3/bin:$PATH
+export WORKON_HOME=$HOME/anaconda3/envs
+

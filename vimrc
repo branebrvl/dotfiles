@@ -148,13 +148,17 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 let g:go_list_type = "quickfix"
 " go test
 " au FileType go nmap <leader>t <Plug>(go-testj
-au FileType go noremap <Leader>t :w<cr>:!clear && go test<cr>
+au FileType go noremap <Leader>t :w<cr>:!clear && go test -v<cr>
 " Or open the Godoc in browser
 au FileType go nmap <Leader>gb <Plug>(go-doc-browser)
+au FileType go nmap <Leader>dt <Plug>(go-def-tab)
 " Show a list of interfaces which is implemented by the type under your cursor with <leader>s
 au FileType go nmap <Leader>s <Plug>(go-implements)
 " Show type info for the word under your cursor with <leader>i (useful if you have disabled auto showing type info via g:go_auto_type_info)
 au FileType go nmap <Leader>i <Plug>(go-info)
+au FileType go noremap <Leader>mt :TestFile -v<cr>
+au FileType go noremap <Leader>mm :TestLast<cr>
+au FileType go noremap <Leader>mtl :TestNearest -v<cr>
 
 " Enable goimports to automatically insert import paths instead of gofmt:
 let g:go_fmt_command = "goimports"
@@ -175,10 +179,10 @@ smap <C-k>     <Plug>(neosnippet_expand_or_jump)
 xmap <C-k>     <Plug>(neosnippet_expand_target)
 
 " SuperTab like snippets behavior.
-"imap <expr><TAB>
-" \ pumvisible() ? "\<C-n>" :
-" \ neosnippet#expandable_or_jumpable() ?
-" \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+imap <expr><TAB>
+\ pumvisible() ? "\<C-n>" :
+\ neosnippet#expandable_or_jumpable() ?
+\    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 \ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 
