@@ -1,4 +1,5 @@
-#!/bin/bash
+#!
+;/bin/bash
 
 export UNLINK=true
 
@@ -73,7 +74,6 @@ symlinkifne .vimrc
 symlinkifne .zshrc
 symlinkifne .gitconfig
 symlinkifne .tmux.conf
-symlinkifne .spacemacs
 
 cd dotfiles/
 

@@ -1,0 +1,34 @@
+{
+    "workbench.colorTheme": "One Dark Pro",
+    "workbench.activityBar.visible": false,
+    "workbench.iconTheme": "vscode-icons",
+    "diffEditor.ignoreTrimWhitespace": true,
+    "workbench.colorCustomizations": {},
+    "editor.fontFamily": "FiraCode-Retina",
+    "editor.fontLigatures": true,
+    "terminal.integrated.fontFamily": "monospace",
+    "editor.lineNumbers": "relative",
+    "zenMode.hideLineNumbers": false,
+    "go.useLanguageServer": true,
+    "go.languageServerExperimentalFeatures": {
+        "diagnostics": false // for build and vet errors as you type
+    },
+    "[go]": {
+        "editor.snippetSuggestions": "none",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        },
+        // "editor.codeActionsOnSaveTimeout": 10000
+    },
+    "gopls": {
+        "usePlaceholders": true // add parameter placeholders when completing a function
+    },
+    "go.lintTool": "golangci-lint",
+    "go.vetOnSave": "workspace",
+    // "go.formatTool": "goimports",
+    "files.eol": "\n",
+    "editor.minimap.enabled": false,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
+}
