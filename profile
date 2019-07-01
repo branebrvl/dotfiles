@@ -9,5 +9,5 @@ source ~/.shellaliases
 export NVM_DIR="/Users/bvladisavljev/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 source ~/.nvm/nvm.sh
-nvm use v6.9.1
+nvm use v10.16.0
 # source /usr/local/bin/virtualenvwrapper.sh

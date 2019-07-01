@@ -19,3 +19,4 @@ source ~/.profile
 
 # view a prev revison
 # svn cat -r 1234 file | less
+
